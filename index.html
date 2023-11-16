@@ -18,15 +18,33 @@
         <div class="calculator">
           <div class="theme-block flex-row">
             <h1>calc</h1>
-            <h2>THEME</h2>
-            <label>
-              <input type="radio" name="theme" id="1" checked />
-              <span>1</span>
-              <input type="radio" name="theme" id="2" checked />
-              <span>2</span>
-              <input type="radio" name="theme" id="3" checked />
-              <span>3</span>
-            </label>
+            <div class="flex-row">
+              <h2>theme</h2>
+              <label>
+                <input
+                  type="radio"
+                  name="theme"
+                  onclick="handleClick(this);"
+                  value="1"
+                  checked
+                />
+                <span>1</span>
+                <input
+                  type="radio"
+                  name="theme"
+                  onclick="handleClick(this);"
+                  value="2"
+                />
+                <span>2</span>
+                <input
+                  type="radio"
+                  name="theme"
+                  onclick="handleClick(this);"
+                  value="3"
+                />
+                <span>3</span>
+              </label>
+            </div>
           </div>
           <form class="buttons">
             <div class="display flex-row">
