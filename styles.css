@@ -22,7 +22,9 @@ body {
   --key-shadow-2: hsl(6, 70%, 34%);
   --key-background-3: hsl(30, 25%, 89%);
   --key-shadow-gray-4: hsl(28, 16%, 65%);
-  --font-color: hsl(221, 14%, 31%);
+  --number-color: hsl(221, 14%, 31%);
+  --font-color: hsl(0, 0%, 100%);
+  --font-btn-color: hsl(0, 0%, 100%);
 }
 .theme-light {
   --main-background: hsl(0, 0%, 90%);
@@ -34,7 +36,9 @@ body {
   --key-shadow-2: hsl(25, 99%, 27%);
   --key-background-3: hsl(45, 7%, 89%);
   --key-shadow-4: hsl(35, 11%, 61%);
+  --number-color: hsl(60, 10%, 19%);
   --font-color: hsl(60, 10%, 19%);
+  --font-btn-color: hsl(0, 0%, 100%);
 }
 
 .theme-violet {
@@ -47,7 +51,9 @@ body {
   --key-shadow-2: hsl(268, 47%, 21%);
   --key-background-3: hsl(198, 20%, 13%);
   --key-shadow-4: hsl(290, 70%, 36%);
+  --number-color: hsl(52, 100%, 62%);
   --font-color: hsl(52, 100%, 62%);
+  --font-btn-color: hsl(0, 0%, 100%);
 }
 
 body {
@@ -56,27 +62,113 @@ body {
   font-size: 32px;
   line-height: 1rem;
   background-color: var(--main-background);
-  color: var(--font-color);
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-flow: row nowrap;
   align-items: center;
+  padding: 20px;
 }
 
 .calculator {
-  border: 1px solid var(--tgle-keypad-background);
+  width: 25%;
 }
 
+.theme-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+/* ------------------Calc and Theme--------------------- */
+.name {
+  align-items: flex-end;
+  width: 100%;
+}
+.name h1 {
+  color: var(--font-color);
+  font-size: 25px;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.theme-switcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+label h2 {
+  color: var(--font-color);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+span {
+  margin-bottom: 5px;
+  color: var(--font-color);
+  font-size: 15px;
+}
+
+/* --------------DISPLAY------------------------ */
+
+.buttons .display input[name="display"] {
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20px 5px;
+  color: var(--font-color);
+  font-size: 32px;
+  font-weight: 700;
+  background-color: var(--screen-background);
+}
+.number-buttons input[type="button"],
+.buttons .display input[name="display"] {
+  cursor: pointer;
+}
+
+/* -------------BUTTONS--------------------------- */
+.number-buttons {
+  padding: 15px;
+  background-color: var(--tgle-keypad-background);
+  border-radius: 8px;
+}
+
+.number-buttons .flex-row input {
+  margin: 10px 5px;
+}
+.number-buttons input[type="button"] {
+  background-color: var(--key-background-3);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--number-color);
+  box-shadow: 0 4px 4px -2px var(--key-shadow-gray-4);
+}
+
+.number-buttons input[type="button"]:hover {
+  background-color: var(--font-btn-color);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--number-color);
+}
+
+.calculator form input {
+  width: 60px;
+  height: 35px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
