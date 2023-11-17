@@ -121,7 +121,10 @@ span {
 }
 
 /* --------------DISPLAY------------------------ */
-
+.calculator form input {
+  width: 60px;
+  height: 35px;
+}
 .buttons .display input[name="display"] {
   width: 100%;
   height: auto;
@@ -154,7 +157,7 @@ span {
   font-size: 20px;
   font-weight: bold;
   color: var(--number-color);
-  box-shadow: 0 4px 4px -2px var(--key-shadow-gray-4);
+  border-bottom: 15px var(--key-background);
 }
 
 .number-buttons input[type="button"]:hover {
@@ -165,10 +168,26 @@ span {
   color: var(--number-color);
 }
 
-.calculator form input {
-  width: 60px;
-  height: 35px;
+/* ---------------BUTTONS WITH TEXT------------ */
+
+.number-buttons input[value="del"],
+input[value="reset"] {
+  text-transform: uppercase;
+  font-weight: bold;
 }
+
+.number-buttons input[value="del"]:hover,
+.number-buttons input[value="reset"]:hover {
+  color: var(--font-color);
+  background-color: var(--key-background);
+}
+/* ------------------Bottom Buttons----------------- */
+
+.number-buttons input[value="="]:hover {
+  background-color: var(--key-background-toggle);
+  color: var(--font-color);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
